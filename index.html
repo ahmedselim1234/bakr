@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meat charset="UTF-8">
+            <title>css</title>
+            <link rel="stylesheet" href="css/master.css">
+            <style>
+                /* Additional styles for search bar */
+                #searchInput {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    box-sizing: border-box;
+                }
+            </style>
+    </head>
+    <body>
+        <section class="cars" id="cars">
+            <div class="heading"> 
+            <span>all cars</span>
+            <h2>we have all types</h2>
+            </div>
+            <div class="cars-container container">
+
+                <div class="box">
+                    <a href="imgs/kia k3.html">
+                    <img src="imgs/kia k3/download (3).jpg" alt=""></a>
+                    <h2>kia k3</h2>
+                </div> 
+                 <div class="box">
+                    <a href="imgs/kia soul.html">
+                    <img src="imgs/kia soul/download.jpg" alt=""></a>
+                    <h2>kia soul</h2>
+                </div>
+                <div class="box">
+                    <a href="imgs/kia sportage.html">
+                    <img src="imgs/kia sportage1/download (2).jpg" alt=""></a>
+                      <h2>kia spourtage</h2>
+                </div>
+                <div class="box">
+                    <a href="imgs/kia ev9.html">
+                    <img src="imgs/kia ev9/download.jpg" alt=""></a>
+                    <h2>kia ev9</h2>
+                </div>
+                <div class="box">
+                    <a href="imgs/kia cerato.html">
+                    <img src="imgs/kia careto/download (1).jpg" alt=""></a>
+                    <h2>kia cerato</h2>
+                </div>
+            </div>
+        </section>
+        <iframe src="https://kia.com.eg/"></iframe>
+        <section class="cars" id="cars">
+            <div class="heading"> 
+                <span>all cars</span>
+                <h2>we have all types</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab porro ea sunt quis eveniet. Sint adipisci dolor saepe suscipit, dignissimos tempore exercitationem magni veritatis molestiae dolorem nostrum corrupti molestias eveniet.</p>
+            </div>
+            <input type="text" id="searchInput" placeholder="Search cars...">
+            <div class="cars-container container">
+                <div class="box">
+                    <a href="imgs/kia k3.html">
+                    <img src="imgs/kia k3/download (3).jpg" alt=""></a>
+                    <h2>kia k3</h2>
+                </div> 
+                <!-- Add more car boxes here -->
+            </div>
+        </section>
+        <iframe src="https://kia.com.eg/"></iframe>
+    
+        <script>
+            // JavaScript for search functionality
+            const searchInput = document.getElementById('searchInput');
+            const carBoxes = document.querySelectorAll('.box');
+    
+            searchInput.addEventListener('input', function() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                
+                carBoxes.forEach(box => {
+                    const carName = box.querySelector('h2').textContent.toLowerCase();
+                    if (carName.includes(searchTerm)) {
+                        box.style.display = 'block';
+                    } else {
+                        box.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

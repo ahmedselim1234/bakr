@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meat charset="UTF-8">
+            <title>css</title>
+            <link rel="stylesheet" href="master tow.css">
+            <style>
+                /* CSS styling for the cars */
+                .car {
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  padding: 10px;
+                  margin: 10px;
+                  width: 200px;
+                  text-align: center;
+                }
+              </style>
+    </head>
+    <body>
+        <section class="cars" id="cars">
+            <div class="heading"> 
+            <span>all cars</span>
+            <h2>we have all types</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab porro ea sunt quis eveniet. Sint adipisci dolor saepe suscipit, dignissimos tempore exercitationem magni veritatis molestiae dolorem nostrum corrupti molestias eveniet.</p>
+            </div>
+            <div class="cars-container container">
+
+                <div class="box">
+                    <a href="hyundai accent.html">
+                    <img src="hyundai accent/download.jpg"alt =""></a>
+                    <h2>hyundai accent</h2>
+                </div> 
+                 <div class="box">
+                    <a href="hyundai verna.html">
+                    <img src="hyundai verna/download.jpg" alt=""></a>
+                    <h2>hyundai verna</h2>
+                </div>
+                <div class="box">
+                    <a href="hyundai sonata.html">
+                    <img src="hyundai tucson/download (1).jpg" alt=""></a>
+                      <h2>hyundai tucson</h2>
+                </div>
+                <div class="box">
+                    <a href="hyundai sonata.html">
+                    <img src="hyundai sonata/download (1).jpg" alt=""></a>
+                    <h2>hyundai sonata</h2>
+                </div>
+                <div class="box">
+                    <a href="hyundai elantra.html">
+                    <img src="hyundai elantra/download.jpg" alt=""></a>
+                    <h2>hyundai elantra</h2>
+                </div>
+            </div>
+        </section>
+        <h2>Leave a Comment</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" required></textarea><br>
+        <div id="carList">
+            <!-- Car list will be dynamically populated here -->
+          </div>
+        
+          <script>
+            // JavaScript code to display cars
+            // Sample car data
+            const cars = [
+              { make: "HYONDai", model: "elantra", year: 2022 },
+              { make: "Honda", model: "sonta", year: 2020 },
+              { make: "hyundai", model: "accent", year: 2019 },
+              { make: "hyundai", model: "verna", year: 2023 }
+            ];
+        
+            // Function to display cars
+            function displayCars() {
+              const carListDiv = document.getElementById('carList');
+        
+              cars.forEach(car => {
+                const carDiv = document.createElement('div');
+                carDiv.classList.add('car');
+                carDiv.innerHTML = `<h3>${car.make} ${car.model}</h3><p>Year: ${car.year}</p>`;
+                carListDiv.appendChild(carDiv);
+              });
+            }
+        
+            // Call the function to display cars when the page loads
+            window.onload = displayCars;
+          </script>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="car">
+      <div class="car-body"></div>
+      <div class="car-window"></div>
+      <div class="car-wheel"></div>
+      <div class="car-wheel"></div>
+  </div>
+    </body>
+</html>

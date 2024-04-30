@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Display</title>
+<style>
+  /* Car body styling */
+  .car {
+    width: 200px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Car windows */
+  .window {
+    width: 50px;
+    height: 40px;
+    background-color: #ddd;
+    position: absolute;
+    top: 30px;
+    border-radius: 10px;
+  }
+  .window.left {
+    left: 20px;
+  }
+  .window.right {
+    right: 20px;
+  }
+  /* Car wheels */
+  .wheel {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+  }
+  .wheel.front {
+    left: 20px;
+  }
+  .wheel.rear {
+    right: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="car">
+  <div class="window left"></div>
+  <div class="window right"></div>
+  <div class="wheel front"></div>
+  <div class="wheel rear"></div>
+</div>
+</body>
+</html>
